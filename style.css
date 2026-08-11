@@ -649,7 +649,7 @@ body.is-loading .hero-monogram {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("assets/screen.png");
+  background-image: url("assets/screen.webp");
   background-repeat: repeat;
   background-size: 480px auto;
   opacity: 0.5;
@@ -955,8 +955,8 @@ body.is-loading .hero-monogram {
   height: 34px;
   margin: 0 auto 1rem;
   background-color: var(--color-gold-light);
-  -webkit-mask-image: url("assets/chruch-icon.png");
-  mask-image: url("assets/chruch-icon.png");
+  -webkit-mask-image: url("assets/chruch-icon.webp");
+  mask-image: url("assets/chruch-icon.webp");
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
