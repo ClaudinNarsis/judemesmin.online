@@ -283,6 +283,49 @@ button {
   right: 0;
 }
 
+.nav-link-active {
+  opacity: 1;
+  border-bottom-color: var(--color-gold-light);
+}
+
+/* -------------------- Sub-page hero -------------------- */
+.page-hero {
+  position: relative;
+  padding: clamp(8rem, 20vw, 11rem) 1.5rem clamp(4rem, 9vw, 6rem);
+  text-align: center;
+  background: var(--color-primary);
+  background-image:
+    radial-gradient(120% 100% at 50% 0%, var(--color-primary-light) 0%, var(--color-primary) 65%);
+  overflow: hidden;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.kicker-on-dark {
+  color: var(--color-gold-light);
+}
+
+.page-hero-title {
+  color: #fffdf8;
+}
+
+.page-hero .hero-divider {
+  margin-top: 0.5rem;
+}
+
+.page-hero-sub {
+  margin-top: 1.5rem;
+  font-size: 0.98rem;
+  font-style: italic;
+  font-family: var(--font-display);
+  color: #f2ead8;
+}
+
 /* -------------------- Intro monogram reveal -------------------- */
 .intro-overlay {
   position: fixed;
@@ -1004,6 +1047,191 @@ body.is-loading .hero-monogram {
   background: var(--color-gold-light);
   color: var(--color-ink);
   transform: translateY(-3px) scale(1.03);
+}
+
+.details-standalone {
+  padding-top: clamp(3rem, 7vw, 5rem);
+}
+
+/* -------------------- Travel / Trains -------------------- */
+.travel {
+  padding: var(--space-section) 1.5rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.travel-note {
+  max-width: 60ch;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-ink-soft);
+  font-size: 0.98rem;
+}
+
+.travel-city {
+  margin-top: clamp(2.5rem, 6vw, 3.5rem);
+}
+
+.travel-city-title {
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-gold);
+}
+
+.train-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.train-card {
+  padding: 1.5rem 1.75rem;
+  background: rgba(176, 141, 87, 0.06);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  transition: border-color 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.train-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px -30px rgba(27, 48, 34, 0.3);
+}
+
+.train-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.train-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.train-number {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--color-ink-soft);
+}
+
+.train-days {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  white-space: nowrap;
+}
+
+.train-route {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.train-point {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.train-point:last-child {
+  text-align: right;
+  margin-left: auto;
+}
+
+.train-time {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.train-station {
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+}
+
+.train-arrow {
+  flex: 1;
+  text-align: center;
+  color: var(--color-gold);
+  font-size: 1.1rem;
+}
+
+.travel-fine {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.inline-link {
+  color: var(--color-gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.25s ease;
+}
+
+.inline-link:hover,
+.inline-link:focus-visible {
+  color: var(--color-primary);
+}
+
+@media (min-width: 640px) {
+  .train-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* -------------------- Accommodation form -------------------- */
+.accom {
+  padding: var(--space-section) 1.5rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.accom-intro {
+  margin-bottom: 3rem;
+}
+
+.accom-note {
+  max-width: 56ch;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-ink-soft);
+  font-size: 0.98rem;
+}
+
+.accom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: clamp(1.75rem, 5vw, 3rem);
+  background: rgba(176, 141, 87, 0.06);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 20px 60px -30px rgba(27, 48, 34, 0.25);
+}
+
+.accom-form-embed iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.form-fallback {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
 }
 
 /* -------------------- Footer -------------------- */
