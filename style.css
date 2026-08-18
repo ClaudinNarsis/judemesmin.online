@@ -259,6 +259,17 @@ button {
   transition: border-color 0.3s ease, opacity 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
 }
 
+@media (max-width: 420px) {
+  .site-nav {
+    gap: 0.5rem 0.7rem;
+  }
+
+  .nav-link {
+    font-size: 0.55rem;
+    letter-spacing: 0.06em;
+  }
+}
+
 .nav-link::after {
   content: "";
   position: absolute;
@@ -299,14 +310,28 @@ button {
   overflow: hidden;
 }
 
-/* Compact variant: used where getting to the first tappable action
-   fast matters more than a full hero moment (e.g. QR-scan landing). */
-.page-hero-compact {
-  padding: clamp(5.5rem, 14vw, 7.5rem) 1.5rem clamp(2.25rem, 5vw, 3rem);
+/* Thin title strip: used where getting to the first tappable action
+   fast matters more than a full hero moment (e.g. QR-scan landing).
+   No kicker/divider/subtitle — just enough to orient, nothing to scroll past. */
+.page-title-strip {
+  padding: clamp(4.5rem, 16vw, 5.5rem) 1.5rem 0.9rem;
+  text-align: center;
+  background: var(--color-primary);
 }
 
-.page-hero-compact .page-hero-sub {
-  margin-top: 0.85rem;
+.page-title-strip-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 4vw, 1.3rem);
+  font-weight: 500;
+  color: #fffdf8;
+  letter-spacing: 0.01em;
+}
+
+.page-title-strip-sub {
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--color-gold-light);
+  letter-spacing: 0.02em;
 }
 
 .page-hero-inner {
@@ -974,6 +999,10 @@ body.is-loading .hero-monogram {
   margin: 0 auto;
 }
 
+.details-standalone .details-grid {
+  gap: 1rem;
+}
+
 .detail-card {
   text-align: center;
   padding: 2.25rem 1.5rem;
@@ -981,6 +1010,21 @@ body.is-loading .hero-monogram {
   border-radius: var(--radius);
   background: rgba(253, 249, 242, 0.03);
   transition: border-color 0.35s ease, background 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+/* Standalone locations page: venue cards should read compactly so the
+   next card is visible (or nearly so) without scrolling past a full screen. */
+.details-standalone .detail-card {
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.details-standalone .detail-icon,
+.details-standalone .detail-icon-img {
+  margin-bottom: 0.6rem;
+}
+
+.details-standalone .detail-title {
+  margin-bottom: 0.3rem;
 }
 
 .detail-card:hover {
@@ -1049,24 +1093,15 @@ body.is-loading .hero-monogram {
 }
 
 .btn-directions {
-  margin-top: 1.25rem;
+  margin-top: 1.1rem;
   min-height: 44px;
   padding: 0.85rem 1.6rem;
-  font-size: 0.7rem;
-  color: var(--color-gold-light);
-  border-color: var(--color-gold-light);
-  background: transparent;
-}
-
-.btn-directions:hover,
-.btn-directions:focus-visible {
-  background: var(--color-gold-light);
-  color: var(--color-ink);
-  transform: translateY(-3px) scale(1.03);
+  font-size: 0.72rem;
 }
 
 .details-standalone {
-  padding-top: clamp(3rem, 7vw, 5rem);
+  padding-top: clamp(1.25rem, 3vw, 2rem);
+  padding-bottom: clamp(2rem, 5vw, 3rem);
 }
 
 /* -------------------- Travel / Trains -------------------- */
