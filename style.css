@@ -299,6 +299,16 @@ button {
   overflow: hidden;
 }
 
+/* Compact variant: used where getting to the first tappable action
+   fast matters more than a full hero moment (e.g. QR-scan landing). */
+.page-hero-compact {
+  padding: clamp(5.5rem, 14vw, 7.5rem) 1.5rem clamp(2.25rem, 5vw, 3rem);
+}
+
+.page-hero-compact .page-hero-sub {
+  margin-top: 0.85rem;
+}
+
 .page-hero-inner {
   position: relative;
   z-index: 1;
@@ -1033,9 +1043,15 @@ body.is-loading .hero-monogram {
   margin-top: 0.25rem;
 }
 
+.detail-card-date {
+  background: transparent;
+  border-style: dashed;
+}
+
 .btn-directions {
   margin-top: 1.25rem;
-  padding: 0.7rem 1.6rem;
+  min-height: 44px;
+  padding: 0.85rem 1.6rem;
   font-size: 0.7rem;
   color: var(--color-gold-light);
   border-color: var(--color-gold-light);
@@ -1191,6 +1207,31 @@ body.is-loading .hero-monogram {
   .train-list {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* -------------------- Stay teaser -------------------- */
+.stay-teaser {
+  position: relative;
+  padding: var(--space-section) 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at top, rgba(176, 141, 87, 0.12), transparent 60%),
+    var(--color-surface-alt);
+}
+
+.stay-teaser-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.stay-teaser-note {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+  color: var(--color-ink-soft);
+  font-size: 1rem;
 }
 
 /* -------------------- Accommodation form -------------------- */
