@@ -1131,6 +1131,13 @@ body.is-loading .hero-monogram {
   border-left: 2px solid var(--color-gold);
 }
 
+.travel-city-note {
+  margin: -0.5rem 0 1.25rem;
+  padding-left: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
 .train-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -1212,11 +1219,44 @@ body.is-loading .hero-monogram {
   color: var(--color-ink-soft);
 }
 
-.train-arrow {
+.train-nextday {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  vertical-align: middle;
+}
+
+.train-leg {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.train-duration {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+}
+
+.train-arrow {
   text-align: center;
   color: var(--color-gold);
   font-size: 1.1rem;
+  line-height: 1;
+}
+
+.train-meta {
+  margin: 1rem 0 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--color-line);
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
 }
 
 .travel-fine {
@@ -1241,6 +1281,11 @@ body.is-loading .hero-monogram {
 @media (min-width: 640px) {
   .train-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  /* A lone trailing card stretches across rather than sitting half-width */
+  .train-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 }
 
