@@ -1282,6 +1282,11 @@ body.is-loading .hero-monogram {
   .train-list {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* A lone trailing card stretches across rather than sitting half-width */
+  .train-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 }
 
 /* -------------------- Stay teaser -------------------- */
