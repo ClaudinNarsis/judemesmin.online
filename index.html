@@ -10,44 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/j_m_wedding_monogram.png">
 <link rel="stylesheet" href="style.css">
-<script>
-// Tapko widget — Vercel preview deployments and local dev only.
-// The live site must never load it, so this fails closed: any host that
-// isn't a recognised preview or localhost gets nothing, not even the
-// network request for the widget script.
-(() => {
-  var LIVE_HOSTS = [
-    'judemesmin.online',
-    'www.judemesmin.online',
-    'judemesmin-online.vercel.app'
-  ];
-  var host = location.hostname;
-  var isPreview =
-    LIVE_HOSTS.indexOf(host) === -1 &&
-    (/\.vercel\.app$/.test(host) || host === 'localhost' || host === '127.0.0.1');
-
-  if (!isPreview) return;
-
-  var script = document.createElement('script');
-  script.src = 'https://tapko-prod-generalbucket.s3.ap-south-1.amazonaws.com/cdn/tapko-widget.js';
-  script.async = true;
-  script.onload = async () => {
-    try {
-      await Tapko.init({
-        projectId: 'c4b6898e-78ff-4375-b45d-2b6b0b5552b5',
-        apiKey: 'your-api-key',
-        userId: 'user_37HZP8DEV5dKk9i8zZUuNbugwMX'
-      });
-    } catch (error) {
-      console.error('Error initializing tapko.app widget:', error);
-    }
-  };
-  script.onerror = () => {
-    console.error('Failed to load tapko.app widget script');
-  };
-  document.head.appendChild(script);
-})();
-</script>
+<script src="assets/tapko-widget.js" defer></script>
 </head>
 <body class="is-loading">
 
